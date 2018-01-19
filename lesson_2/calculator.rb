@@ -1,5 +1,5 @@
 def prompt(message)
-  puts ("=> #{message}")
+  puts "=> #{message}"
 end
 
 prompt "Welcome to the calculator!"
@@ -11,7 +11,7 @@ prompt "What is your second number?"
 
 num2 = gets.chomp
 
-whatOperator = <<-MSG
+what_operator = <<-MSG
 What operation would you like to perform?
   1) Add
   2) Subtract
@@ -19,22 +19,20 @@ What operation would you like to perform?
   4) Divide
   MSG
 
-
-prompt whatOperator
-
+prompt what_operator
 operation = gets.chomp
 
 result = nil
 
 case operation
-  when '1'
-    result = num1.to_i + num2.to_i 
-  when '2'
-    result = num1.to_i  - num2.to_i 
-  when '3'
-    result = num1.to_i  * num2.to_i 
-  when '4'
-    result = num1.to_f / num2.to_f
+when '1'
+  result = num1.to_i + num2.to_i
+when '2'
+  result = num1.to_i - num2.to_i
+when '3'
+  result = num1.to_i * num2.to_i
+when '4'
+  result = num1.to_f / num2.to_f
 end
 
-prompt "The result is #{result}" 
+prompt "The result is #{result}"
