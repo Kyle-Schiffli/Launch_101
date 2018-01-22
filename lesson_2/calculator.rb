@@ -3,9 +3,19 @@ def prompt(message)
 end
 
 prompt "Welcome to the calculator!"
+
+num1 = ""
+Loop do 
 prompt "What is your first number?"
 
 num1 = gets.chomp
+
+break if (num1.to_i)is.number?
+end 
+  
+prompt "That is not a vaild number."
+end
+
 
 prompt "What is your second number?"
 
