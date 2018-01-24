@@ -9,7 +9,7 @@
 def average(array)
   sum = 0
   array.each { |x| sum += x }
-  sum / array.count
+  (sum / array.count).to_f
 end
 
 puts average([1, 5, 87, 45, 8, 8])
