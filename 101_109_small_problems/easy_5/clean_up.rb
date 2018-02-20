@@ -5,4 +5,9 @@
 # should only have one space in the result (the result should
 # never have consecutive spaces).
 
+def cleanup(str)
+str.gsub!(/[^0-9A-Za-z]/, " ").squeeze(" ")
+
+end
+
 puts cleanup("---what's my +*& line?") == ' what s my line '

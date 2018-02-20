@@ -17,7 +17,6 @@ end
 last = start.to_s.reverse.chr
 suffix = ''
 
-  
 case last
   when  '1'
     suffix = 'st'

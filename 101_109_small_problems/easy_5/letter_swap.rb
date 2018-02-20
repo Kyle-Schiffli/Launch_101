@@ -6,6 +6,20 @@
 # and that the string will always contain at least one word.
 # You may also assume that each string contains nothing but words and spaces
 
+def swap_first_last_letters(word)
+  word[0], word[-1] = word[-1], word[0]
+  word
+end
+
+
+def swap(words)
+  result = words.split.map {|word|
+    swap_first_last_letters(word)
+  }
+  
+result.join(" ")
+end
+
 puts swap('Oh what a wonderful day it is') == 'hO thaw a londerfuw yad ti si'
 puts swap('Abcde') == 'ebcdA'
 puts swap('a') == 'a'
